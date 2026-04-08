@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba Firebase</title>
+</head>
+<body>
+  <h1>Prueba de conexión Firebase</h1>
+
+  <script type="module">
+  import { guardarContenedor } from "./database.js";
+
+  const dataPrueba = {
+    clasificacion: "Lleno",
+    confianza: 0.95,
+    ubicacionTexto: "Riobamba Centro",
+    lat: -1.66,
+    lng: -78.65,
+    accion: "Enviar camión",
+    fecha: new Date().toISOString()
+  };
+
+  guardarContenedor(dataPrueba);
+</script>
+</body>
+</html>
